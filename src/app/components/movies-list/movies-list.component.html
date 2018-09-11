@@ -1,0 +1,40 @@
+
+
+<!-- Search form -->
+<form class="form-inline waves-light  align-middle flex-center" mdbWavesEffect>
+    <div class="mt-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search a Movie..." name="searchMovie" [(ngModel)]="searchMovie">
+    </div>
+
+    <select class="custom-select my-1 mr-sm-2" name="genere" [(ngModel)]="genere">
+        <option [value]="''" selected>All Generes</option>
+        <option *ngFor="let genere of generes" [value]="genere"> 
+          {{genere}}
+        </option>
+      </select>
+  </form>
+  
+
+  <div class  = "moviesListWrapper row">
+  
+  <div (click)="onSelectMovie(movie)" class="col-md-4 col-lg-3 view overlay" *ngFor = "let movie of moviesList  | filterMovies:searchMovie | filterGenere:genere">
+
+        <mdb-card>
+            <!--Card image-->
+            <img class="img-fluid mx-auto" src="../../assets/content/images/movie-covers/{{movie.img}}" alt="{{movie.name}}">
+    
+            
+            <div class="mask flex-center rgba-blue-light">
+            </div>
+            <!--Card content-->
+            <mdb-card-body>
+          
+              <!--Title-->
+              <mdb-card-title> <h4>{{movie.name}}</h4> </mdb-card-title>
+          
+            </mdb-card-body>
+          </mdb-card>
+          
+
+  </div>
+</div>

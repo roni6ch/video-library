@@ -1,0 +1,7 @@
+.card{
+    width: 480px;
+    margin: 0 auto;
+}
+.card-body span{
+text-transform: capitalize;
+}
