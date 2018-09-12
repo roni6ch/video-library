@@ -1,0 +1,24 @@
+.detailsBT{
+    margin: 0 auto;
+    display: block;
+}
+.mask{
+    cursor: pointer;
+}
+.view img{
+    padding: 10px;
+}
+.moviesListWrapper {
+    margin-bottom: 100px;
+}
+.card {
+    margin: 15px 0px;
+    cursor: pointer;
+    .card-body h4{
+        text-align: center;
+        font-size: 18px;
+    }
+    .card-body{
+        height:100px;
+    }
+}
