@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MovieComponent } from './movie.component';
+import {RouterTestingModule} from '@angular/router/testing';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MovieComponent', () => {
   let component: MovieComponent;
@@ -8,7 +11,8 @@ describe('MovieComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieComponent ]
+      declarations: [ MovieComponent ],
+      imports: [ RouterTestingModule,MDBBootstrapModule,HttpClientModule ]
     })
     .compileComponents();
   }));

@@ -1,11 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import {RouterTestingModule} from '@angular/router/testing';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,HeaderComponent,FooterComponent
       ],
+      imports: [ RouterTestingModule,MDBBootstrapModule ]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
@@ -22,6 +28,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to video-list!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Movie list!');
   }));
 });

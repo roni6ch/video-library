@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+
 /* Services */
 import { MoviesService } from './services/movies.service';
 
@@ -37,6 +38,7 @@ import { FilterGenerePipe } from './pipes/filter-genere.pipe';
     FormsModule,
     MDBBootstrapModule.forRoot()
   ],
+  exports:[FilterGenerePipe],
   providers: [MoviesService],
   bootstrap: [AppComponent]
 })

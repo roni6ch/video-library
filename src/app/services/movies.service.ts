@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { IMovie } from '../interfaces/IMovie';
 import { Observable } from 'rxjs';
 import { movies } from '../../assets/content/movie.mock-data';
+import { map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +24,6 @@ private _url = "../assets/content/movie.mock-data.ts";
     return movies.find(function(movie) {
       return movie.id === id;
     });
+    return false;
   }
 }
