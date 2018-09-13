@@ -7,7 +7,7 @@
     </div>
 
     <select class="custom-select my-1 mr-sm-2" name="genere" [(ngModel)]="genere">
-        <option [value]="''" selected>All Generes</option>
+        <option [ngValue]='-1' selected>All Generes</option>
         <option *ngFor="let genere of generes" [value]="genere"> 
           {{genere}}
         </option>
