@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MoviesListComponent } from './movies-list.component';
+import { FormsModule } from '@angular/forms';
+import { FilterGenerePipe } from '../../pipes/filter-genere.pipe';
 
 describe('MoviesListComponent', () => {
   let component: MoviesListComponent;
@@ -8,7 +10,8 @@ describe('MoviesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoviesListComponent ]
+      declarations: [ MoviesListComponent ],
+      imports: [ FormsModule,FilterGenerePipe]
     })
     .compileComponents();
   }));

@@ -24,5 +24,6 @@ private _url = "../assets/content/movie.mock-data.ts";
     return movies.find(function(movie) {
       return movie.id === id;
     });
+    return false;
   }
 }
