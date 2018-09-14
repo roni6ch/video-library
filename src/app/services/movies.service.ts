@@ -10,6 +10,7 @@ import { movies } from '../../assets/content/movie.mock-data';
 export class MoviesService {
 
   constructor() { 
+    
     console.log(movies);
   }
 
