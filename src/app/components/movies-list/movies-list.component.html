@@ -34,7 +34,7 @@
                 <!--Card image-->
                 <img
                     class="img-fluid mx-auto"
-                    src="../../assets/content/images/movie-covers/{{movie.img}}"
+                    [src]="'./assets/content/images/movie-covers/'+movie?.img"
                     alt="{{movie.name}}">
 
                     <div class="mask flex-center rgba-blue-light"></div>

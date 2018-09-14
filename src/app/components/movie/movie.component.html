@@ -16,7 +16,7 @@
             <div class="view view-cascade overlay">
                 <img
                     class="img-fluid mx-auto"
-                    src="../../assets/content/images/movie-covers/{{movieObj?.img}}"
+                    [src]="'./assets/content/images/movie-covers/'+movieObj?.img"
                     alt="{{movieObj?.name}}"></div>
                 <!--/Card image-->
 
