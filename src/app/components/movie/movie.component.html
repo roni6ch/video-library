@@ -1,59 +1,51 @@
 <!-- Card -->
-    <div class="movieWrapper animated zoomInUp">
+<div class="movieWrapper animated zoomInUp">
 
+    <mdb-card cascade="true" wider="true" reverse="true" class="my-4">
 
-      <mdb-card cascade="true" wider="true" reverse="true" class="my-4">
-       
         <!-- Card content -->
         <mdb-card-body cascade="true" class="text-center">
-          <!--Title-->
-          <mdb-card-title>
-            <h4>
-              <strong>{{movieObj?.name}}</strong>
-            </h4>
-          </mdb-card-title>
-      
-       <!--Card image-->
-       <div class="view view-cascade overlay" >
-        <img class="img-fluid mx-auto" src="../../assets/content/images/movie-covers/{{movieObj?.img}}" alt="{{movieObj?.name}}">
-    
-       
-      </div>
-      <!--/Card image-->
+            <!--Title-->
+            <mdb-card-title>
+                <h4>
+                    <strong>{{movieObj?.name}}</strong>
+                </h4>
+            </mdb-card-title>
 
-      
-          <h5 class="rate">
-              <i class="fa fa-star px-2 yellow-text"> </i><span>rate: </span><strong>{{movieObj?.rate}} </strong>
-          </h5>
-      
-          <mdb-card-text>
-            {{movieObj?.description}}
-           </mdb-card-text>
-      
-             
-           <mdb-card-text><i class="fa fa-film px-2"> </i><span>length: </span>{{movieObj?.length}}</mdb-card-text>
-           <mdb-card-text><i class="fa fa-tag px-2"> </i><span>genres: </span>{{movieObj?.genres}}</mdb-card-text>
-           
-      
-          <!--Linkedin-->
-          <a class="icons-sm li-ic">
-            <i class="fa fa-linkedin px-2"> </i>
-          </a>
-          <!--Twitter-->
-          <a class="icons-sm tw-ic">
-            <i class="fa fa-twitter px-2"> </i>
-          </a>
-          <!--Dribbble-->
-          <a class="icons-sm fb-ic">
-            <i class="fa fa-youtube px-2"> </i>
-          </a>
-        </mdb-card-body>
-      
-      </mdb-card>
-</div>
-<a routerLink="/movies-list" class="btn btn-primary waves-light detailsBT" mdbWavesEffect>Back!</a>
+            <!--Card image-->
+            <div class="view view-cascade overlay">
+                <img
+                    class="img-fluid mx-auto"
+                    src="../../assets/content/images/movie-covers/{{movieObj?.img}}"
+                    alt="{{movieObj?.name}}"></div>
+                <!--/Card image-->
 
+                <h5 class="rate">
+                    <i class="fa fa-star px-2 yellow-text"></i>
+                    <span>rate:
+                    </span>
+                    <strong>{{movieObj?.rate}}
+                    </strong>
+                </h5>
 
+                <mdb-card-text>
+                    {{movieObj?.description}}
+                </mdb-card-text>
 
+                <mdb-card-text>
+                    <i class="fa fa-film px-2"></i>
+                    <span>length:
+                    </span>{{movieObj?.length}}</mdb-card-text>
+                <mdb-card-text>
+                    <i class="fa fa-tag px-2"></i>
+                    <span>genres:
+                    </span>{{movieObj?.genres}}</mdb-card-text>
 
+            </mdb-card-body>
 
+        </mdb-card>
+    </div>
+    <a
+        routerLink="/movies"
+        class="btn btn-primary waves-light detailsBT"
+        mdbWavesEffect>Back!</a>

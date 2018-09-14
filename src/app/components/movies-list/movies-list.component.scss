@@ -1,24 +1,31 @@
-.detailsBT{
+.detailsBT {
     margin: 0 auto;
     display: block;
 }
-.mask{
+.mask {
     cursor: pointer;
 }
-.view img{
+.view img {
     padding: 10px;
 }
 .moviesListWrapper {
     margin-bottom: 100px;
 }
 .card {
-    margin: 15px 0px;
+    margin: 15px 0;
     cursor: pointer;
-    .card-body h4{
-        text-align: center;
-        font-size: 18px;
+    .card-body {
+        height: 120px;
+        padding: 0.5rem;
+        h4 {
+            text-align: center;
+            font-size: 18px;
+        }
+        h6 {
+            font-size: 14px;
+        }
     }
-    .card-body{
-        height:100px;
-    }
+}
+mdb-card-title h6 {
+    text-align: center;
 }

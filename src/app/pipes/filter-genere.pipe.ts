@@ -1,16 +1,17 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
-  name: 'filterGenere'
+    name: 'filterGenere'
 })
 export class FilterGenerePipe implements PipeTransform {
 
-  transform(generes: any[], filter: Object): any {
-    if (!generes || !filter || filter === "") {
-      return generes;
+    transform(generes : any[], filter : Object) : any {
+        if(!generes || !filter || filter === "") {
+            return generes;
+        }
+        return generes.filter(genere => {
+            return genere.genres.indexOf(filter) !== -1
+        });
     }
-    return generes.filter(genere => {
-      return genere.genres.indexOf(filter) !== -1});
-  }
 
 }
