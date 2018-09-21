@@ -5,11 +5,11 @@ import {Pipe, PipeTransform} from '@angular/core';
 })
 export class FilterMoviesPipe implements PipeTransform {
 
-    transform(movies : any[], filter : Object) : any {
+    transform(movies : any[], filter : string) : any {
         if(!movies || !filter) {
             return movies;
         }
-        return movies.filter(movie => movie.name.toLowerCase().indexOf(filter) !== -1);
+        return movies.filter(movie => movie.name.toLowerCase().indexOf(filter.toLowerCase()) !== -1);
     }
 
 }
